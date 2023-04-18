@@ -1,8 +1,13 @@
 public class Main {
 
+    @Override
+    public String toString() {
+        return "Main{}";
+    }
+
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
+        System.out.println("Привет мир !");
 
 
         Author Griboyedov = new Author(" Alexander  ", " Griboyedov ");
@@ -23,7 +28,31 @@ public class Main {
         System.out.println(Power.getAuthor().getName() + " " + Power.getAuthor().getSurname());
         System.out.println(Power.getYear());
 
-        Power.setYear( 2020);
-        System.out.println("Год издания Power " + Power.getYear() );
+        Power.setYear(2020);
+        System.out.println("Год издания Power " + Power.getYear());
+
+
+        Author a1 = new Author(" Alexander  ", " Griboyedov ");
+        Author a2 = new Author(" Alexander  ", " Griboyedov ");
+        System.out.println(a1 == a2);
+        System.out.println(a1.equals(a2));
+
+        String name = " Hi ";
+        Author a3 = new Author( "  Nikolay ", " Starikov ");
+
+        int hashA1=a1.hashCode();
+        int hashA2=a2.hashCode();
+        int hashA3=a3.hashCode();
+
+        System.out.println(a1.equals(a1)+ " hascodes " +  hashA1 + " "+ hashA1 );
+        System.out.println(a1.equals(a2)+ " hascodes " +  hashA1 + " "+ hashA2 );
+        System.out.println(a1.equals(a3)+ " hascodes " +  hashA1 + " "+ hashA3 );
+
+
     }
 }
+
+
+
+
+
